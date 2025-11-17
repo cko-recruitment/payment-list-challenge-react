@@ -1,0 +1,63 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+
+# Build and output
+dist/
+build/
+out/
+coverage/
+.vite/
+.vitest/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE settings
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test and lint artifacts
+*.log
+jest-output/
+test-output/
+
+# Misc
+public/mockServiceWorker.js
+
+# TypeScript
+*.d.ts.map
+
+# Workspaces and editors
+*.code-workspace
+
+# Editor-based HTTP Client requests
+httpRequests/
+
+# Datasource local storage ignored files
+dataSources/
+dataSources.local.xml
+
+# IntelliJ workspace files
+payments-dashboard-ui.iml
+
+# XML test output, seen in structure
+junit.xml
+
+# Remove IDE/settings-specific XML if unwanted
+.idea/misc.xml
+.idea/modules.xml
+.idea/payments-dashboard-ui.iml
+.idea/vcs.xml
+.idea/workspace.xml

@@ -1,3 +1,5 @@
+import {PAYMENT_STATUS} from "./index.ts";
+
 export const I18N = {
   // App title
   APP_TITLE: "Checkout.com",
@@ -29,14 +31,30 @@ export const I18N = {
   PREVIOUS_BUTTON: "◀ Previous",
   NEXT_BUTTON: "Next ▶",
   PAGE_LABEL: "Page",
-  
+
+  // Payment Status
+  PAYMENT_STATUS_COMPLETED: PAYMENT_STATUS.COMPLETED,
+  PAYMENT_STATUS_PENDING: PAYMENT_STATUS.PENDING,
+  PAYMENT_STATUS_FAILED: PAYMENT_STATUS.FAILED,
+  PAYMENT_STATUS_REFUNDED: PAYMENT_STATUS.REFUNDED,
+
   // Messages
   NO_PAYMENTS_FOUND: "No payments found.",
   PAYMENT_NOT_FOUND: "Payment not found.",
-  INTERNAL_SERVER_ERROR: "Internal server error. Please try again later.",
-  SOMETHING_WENT_WRONG: "Something went wrong!",
   
   // Fallback values
   EMPTY_CUSTOMER: "—",
   EMPTY_CURRENCY: "—",
+
+  // ERROR MESSAGES
+  // HTTP / API
+  INTERNAL_SERVER_ERROR: "Internal server error. Please try again later.",
+  SOMETHING_WENT_WRONG: "Something went wrong!",
+  API_REQUEST_FAILED: "API request failed",
+  // Currency formatting
+  AMOUNT_FORMAT_ERROR: "Failed to format amount",
+  NON_FINITE_AMOUNT: "Received non-finite amount value",
+  // Date formatting
+  DATE_FORMAT_ERROR: "Failed to format date",
+  INVALID_ISO_DATE: "Received invalid ISO date string",
 } as const; 

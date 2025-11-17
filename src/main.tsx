@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
 import App from './App';
+import { isDev } from "./constants/env.ts";
 
 async function enableMocking() {
-  if (process.env.NODE_ENV !== 'development') {
+  if (!isDev) {
     return;
   }
 
