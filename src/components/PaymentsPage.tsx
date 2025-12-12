@@ -23,11 +23,15 @@ type Payment = {
 const usePaymentTable = (apiBaseUrl = API_URL) => {
   // state management
   const [payments, setPayments] = useState([]);
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(5);
+
+  const query = `page=${page}&pageSize=${pageSize}`;
 
   // API call to fetch payments
   const fetchPayments = useCallback(async () => {
     try {
-      const response = await fetch(`${apiBaseUrl}`);
+      const response = await fetch(`${apiBaseUrl}?${query}`);
       const data = await response.json();
       setPayments(data.payments || []);
     } catch (error) {

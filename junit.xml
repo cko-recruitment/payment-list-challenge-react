@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="11" failures="1" errors="0" time="0.106447291">
-    <testsuite name="src/App.test.tsx" timestamp="2025-12-11T22:34:50.522Z" hostname="Julias-Air.powerhub" tests="11" failures="1" errors="0" skipped="10" time="0.106447291">
-        <testcase classname="src/App.test.tsx" name="App - Step 1: Basic Payment List &gt; should fetch and display payments in a table with page=1 and pageSize=5" time="0.105016458">
+<testsuites name="vitest tests" tests="11" failures="0" errors="0" time="0.082269458">
+    <testsuite name="src/App.test.tsx" timestamp="2025-12-12T08:23:48.784Z" hostname="Julias-Air.powerhub" tests="11" failures="0" errors="0" skipped="10" time="0.082269458">
+        <testcase classname="src/App.test.tsx" name="App - Step 1: Basic Payment List &gt; should fetch and display payments in a table with page=1 and pageSize=5" time="0.080916917">
             <system-out>
 Payments data: []
 
@@ -55,56 +55,6 @@ Payments data: [
     status: [32m&apos;failed&apos;[39m,
     date: [32m&apos;2024-04-18T11:00:00Z&apos;[39m,
     description: [32m&apos;Refunded service&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_1&apos;[39m,
-    customerName: [32m&apos;Charlie Blue&apos;[39m,
-    amount: [33m300[39m,
-    customerAddress: [32m&apos;303 Blue St, Berlin, Germany&apos;[39m,
-    currency: [32m&apos;USD&apos;[39m,
-    status: [32m&apos;completed&apos;[39m,
-    date: [32m&apos;2024-04-15T12:00:00Z&apos;[39m,
-    description: [32m&apos;Subscription payment&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_2&apos;[39m,
-    customerName: [32m&apos;Diana Purple&apos;[39m,
-    amount: [33m500.5[39m,
-    customerAddress: [32m&apos;404 Purple Rd, Rome, Italy&apos;[39m,
-    currency: [32m&apos;EUR&apos;[39m,
-    status: [32m&apos;failed&apos;[39m,
-    date: [32m&apos;2024-04-15T13:00:00Z&apos;[39m,
-    description: [32m&apos;Refunded purchase&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_3&apos;[39m,
-    customerName: [32m&apos;Ivan Gray&apos;[39m,
-    amount: [33m400[39m,
-    customerAddress: [32m&apos;505 Gray Ave, Madrid, Spain&apos;[39m,
-    currency: [32m&apos;GBP&apos;[39m,
-    status: [32m&apos;completed&apos;[39m,
-    date: [32m&apos;2024-04-16T14:00:00Z&apos;[39m,
-    description: [32m&apos;Event sponsorship&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_4&apos;[39m,
-    customerName: [32m&apos;Jack Pink&apos;[39m,
-    amount: [33m350[39m,
-    customerAddress: [32m&apos;606 Pink Rd, Lisbon, Portugal&apos;[39m,
-    currency: [32m&apos;USD&apos;[39m,
-    status: [32m&apos;pending&apos;[39m,
-    date: [32m&apos;2024-04-17T15:00:00Z&apos;[39m,
-    description: [32m&apos;Product upgrade&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_5&apos;[39m,
-    customerName: [32m&apos;Lena Orange&apos;[39m,
-    amount: [33m275[39m,
-    customerAddress: [32m&apos;707 Orange Lane, Vienna, Austria&apos;[39m,
-    currency: [32m&apos;EUR&apos;[39m,
-    status: [32m&apos;completed&apos;[39m,
-    date: [32m&apos;2024-04-18T16:00:00Z&apos;[39m,
-    description: [32m&apos;Consulting fee&apos;[39m
   }
 ]
 
@@ -158,56 +108,6 @@ Payments data: [
     status: [32m&apos;failed&apos;[39m,
     date: [32m&apos;2024-04-18T11:00:00Z&apos;[39m,
     description: [32m&apos;Refunded service&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_1&apos;[39m,
-    customerName: [32m&apos;Charlie Blue&apos;[39m,
-    amount: [33m300[39m,
-    customerAddress: [32m&apos;303 Blue St, Berlin, Germany&apos;[39m,
-    currency: [32m&apos;USD&apos;[39m,
-    status: [32m&apos;completed&apos;[39m,
-    date: [32m&apos;2024-04-15T12:00:00Z&apos;[39m,
-    description: [32m&apos;Subscription payment&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_2&apos;[39m,
-    customerName: [32m&apos;Diana Purple&apos;[39m,
-    amount: [33m500.5[39m,
-    customerAddress: [32m&apos;404 Purple Rd, Rome, Italy&apos;[39m,
-    currency: [32m&apos;EUR&apos;[39m,
-    status: [32m&apos;failed&apos;[39m,
-    date: [32m&apos;2024-04-15T13:00:00Z&apos;[39m,
-    description: [32m&apos;Refunded purchase&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_3&apos;[39m,
-    customerName: [32m&apos;Ivan Gray&apos;[39m,
-    amount: [33m400[39m,
-    customerAddress: [32m&apos;505 Gray Ave, Madrid, Spain&apos;[39m,
-    currency: [32m&apos;GBP&apos;[39m,
-    status: [32m&apos;completed&apos;[39m,
-    date: [32m&apos;2024-04-16T14:00:00Z&apos;[39m,
-    description: [32m&apos;Event sponsorship&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_4&apos;[39m,
-    customerName: [32m&apos;Jack Pink&apos;[39m,
-    amount: [33m350[39m,
-    customerAddress: [32m&apos;606 Pink Rd, Lisbon, Portugal&apos;[39m,
-    currency: [32m&apos;USD&apos;[39m,
-    status: [32m&apos;pending&apos;[39m,
-    date: [32m&apos;2024-04-17T15:00:00Z&apos;[39m,
-    description: [32m&apos;Product upgrade&apos;[39m
-  },
-  {
-    id: [32m&apos;pay_456_5&apos;[39m,
-    customerName: [32m&apos;Lena Orange&apos;[39m,
-    amount: [33m275[39m,
-    customerAddress: [32m&apos;707 Orange Lane, Vienna, Austria&apos;[39m,
-    currency: [32m&apos;EUR&apos;[39m,
-    status: [32m&apos;completed&apos;[39m,
-    date: [32m&apos;2024-04-18T16:00:00Z&apos;[39m,
-    description: [32m&apos;Consulting fee&apos;[39m
   }
 ]
 
@@ -244,17 +144,6 @@ This will cause a hydration error.
 See this log for the ancestor stack trace.
 
             </system-err>
-            <failure message="expected [ …(11) ] to have a length of 6 but got 11" type="AssertionError">
-AssertionError: expected [ …(11) ] to have a length of 6 but got 11
-
-- Expected
-+ Received
-
-- 6
-+ 11
-
- ❯ src/App.test.tsx:93:23
-            </failure>
         </testcase>
         <testcase classname="src/App.test.tsx" name="App - Step 2: Search by Payment ID &gt; should have a search input for payment ID" time="0">
             <skipped/>
