@@ -23,8 +23,8 @@ type Payment = {
 const usePaymentTable = (apiBaseUrl = API_URL) => {
   // state management
   const [payments, setPayments] = useState([]);
-  const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(5);
+  const [page] = useState(1);
+  const [pageSize] = useState(5);
 
   const query = `page=${page}&pageSize=${pageSize}`;
 
