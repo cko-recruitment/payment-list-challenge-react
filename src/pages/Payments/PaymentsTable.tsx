@@ -17,6 +17,7 @@ import {
 } from "../../components/components";
 import { usePaymentTable } from "../../hooks/usePaymentTable";
 import { Payment } from "../../types/payment";
+import {I18N} from "../../constants/i18n";
 
 export const PaymentsTable = () => {
   const { payments } = usePaymentTable();
@@ -27,37 +28,37 @@ export const PaymentsTable = () => {
     () =>
       [
         columnHelper.accessor("id", {
-          header: "Payment ID",
-          cell: (info: CellContext<unknown, never>) => (
-            <TableCell>{info.getValue()}</TableCell>
-          ),
-        }),
-        columnHelper.accessor("customerName", {
-          header: "Customer",
+          header: I18N.TABLE_HEADER_PAYMENT_ID,
           cell: (info: CellContext<unknown, never>) => (
             <TableCell>{info.getValue()}</TableCell>
           ),
         }),
         columnHelper.accessor("date", {
-          header: "Date",
+          header: I18N.TABLE_HEADER_DATE,
           cell: (info: CellContext<unknown, never>) => (
-            <TableCell>${info.getValue()}</TableCell>
+            <TableCell>{new Date(info.getValue()).toLocaleString()}</TableCell>
           ),
         }),
         columnHelper.accessor("amount", {
-          header: "Amount",
+          header: I18N.TABLE_HEADER_AMOUNT,
           cell: (info: CellContext<unknown, never>) => (
-            <TableCell>${info.getValue()}</TableCell>
+            <TableCell>{Number.parseFloat(info.getValue()).toFixed(2)}</TableCell>
           ),
         }),
-        columnHelper.accessor("Currency", {
-          header: "Currency",
+        columnHelper.accessor("customerName", {
+          header: I18N.TABLE_HEADER_CUSTOMER,
           cell: (info: CellContext<unknown, never>) => (
-            <TableCell>${info.getValue()}</TableCell>
+            <TableCell>{info.getValue()}</TableCell>
+          ),
+        }),
+        columnHelper.accessor("currency", {
+          header: I18N.TABLE_HEADER_CURRENCY,
+          cell: (info: CellContext<unknown, never>) => (
+            <TableCell>{info.getValue()}</TableCell>
           ),
         }),
         columnHelper.accessor("status", {
-          header: "Status",
+          header: I18N.TABLE_HEADER_STATUS,
           cell: (info: CellContext<unknown, never>) => (
             <TableCell>{info.getValue()}</TableCell>
           ),
