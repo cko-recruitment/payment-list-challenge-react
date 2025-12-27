@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="11" failures="0" errors="0" time="0.083576417">
+    <testsuite name="src/App.test.tsx" timestamp="2025-12-12T08:52:59.302Z" hostname="Julias-Air.powerhub" tests="11" failures="0" errors="0" skipped="10" time="0.083576417">
+        <testcase classname="src/App.test.tsx" name="App - Step 1: Basic Payment List &gt; should fetch and display payments in a table with page=1 and pageSize=5" time="0.081933917">
+            <system-out>
+Payments data: []
+
+Payments data: [
+  {
+    id: [32m&apos;pay_134_1&apos;[39m,
+    customerName: [32m&apos;Alice Green&apos;[39m,
+    amount: [33m250[39m,
+    customerAddress: [32m&apos;101 Green St, Springfield, USA&apos;[39m,
+    currency: [32m&apos;USD&apos;[39m,
+    status: [32m&apos;completed&apos;[39m,
+    date: [32m&apos;2024-04-15T10:00:00Z&apos;[39m,
+    description: [32m&apos;Service payment&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_2&apos;[39m,
+    customerName: [32m&apos;Bob Red&apos;[39m,
+    amount: [33m150.5[39m,
+    customerAddress: [32m&apos;202 Red Ave, Paris, France&apos;[39m,
+    currency: [32m&apos;EUR&apos;[39m,
+    status: [32m&apos;pending&apos;[39m,
+    date: [32m&apos;2024-04-15T11:00:00Z&apos;[39m,
+    description: [32m&apos;Product purchase&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_3&apos;[39m,
+    customerName: [32m&apos;Eva White&apos;[39m,
+    amount: [33m120.75[39m,
+    customerAddress: [32m&apos;303 White Blvd, London, UK&apos;[39m,
+    currency: [32m&apos;GBP&apos;[39m,
+    status: [32m&apos;completed&apos;[39m,
+    date: [32m&apos;2024-04-16T09:30:00Z&apos;[39m,
+    description: [32m&apos;Annual fee&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_4&apos;[39m,
+    customerName: [32m&apos;David Black&apos;[39m,
+    amount: [33m200[39m,
+    customerAddress: [32m&apos;404 Black Ln, Tokyo, Japan&apos;[39m,
+    currency: [32m&apos;JPY&apos;[39m,
+    status: [32m&apos;pending&apos;[39m,
+    date: [32m&apos;2024-04-17T10:00:00Z&apos;[39m,
+    description: [32m&apos;One-time payment&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_5&apos;[39m,
+    customerName: [32m&apos;Fiona Yellow&apos;[39m,
+    amount: [33m85.25[39m,
+    customerAddress: [32m&apos;505 Yellow Way, Sydney, Australia&apos;[39m,
+    currency: [32m&apos;AUD&apos;[39m,
+    status: [32m&apos;failed&apos;[39m,
+    date: [32m&apos;2024-04-18T11:00:00Z&apos;[39m,
+    description: [32m&apos;Refunded service&apos;[39m
+  }
+]
+
+Payments data: [
+  {
+    id: [32m&apos;pay_134_1&apos;[39m,
+    customerName: [32m&apos;Alice Green&apos;[39m,
+    amount: [33m250[39m,
+    customerAddress: [32m&apos;101 Green St, Springfield, USA&apos;[39m,
+    currency: [32m&apos;USD&apos;[39m,
+    status: [32m&apos;completed&apos;[39m,
+    date: [32m&apos;2024-04-15T10:00:00Z&apos;[39m,
+    description: [32m&apos;Service payment&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_2&apos;[39m,
+    customerName: [32m&apos;Bob Red&apos;[39m,
+    amount: [33m150.5[39m,
+    customerAddress: [32m&apos;202 Red Ave, Paris, France&apos;[39m,
+    currency: [32m&apos;EUR&apos;[39m,
+    status: [32m&apos;pending&apos;[39m,
+    date: [32m&apos;2024-04-15T11:00:00Z&apos;[39m,
+    description: [32m&apos;Product purchase&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_3&apos;[39m,
+    customerName: [32m&apos;Eva White&apos;[39m,
+    amount: [33m120.75[39m,
+    customerAddress: [32m&apos;303 White Blvd, London, UK&apos;[39m,
+    currency: [32m&apos;GBP&apos;[39m,
+    status: [32m&apos;completed&apos;[39m,
+    date: [32m&apos;2024-04-16T09:30:00Z&apos;[39m,
+    description: [32m&apos;Annual fee&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_4&apos;[39m,
+    customerName: [32m&apos;David Black&apos;[39m,
+    amount: [33m200[39m,
+    customerAddress: [32m&apos;404 Black Ln, Tokyo, Japan&apos;[39m,
+    currency: [32m&apos;JPY&apos;[39m,
+    status: [32m&apos;pending&apos;[39m,
+    date: [32m&apos;2024-04-17T10:00:00Z&apos;[39m,
+    description: [32m&apos;One-time payment&apos;[39m
+  },
+  {
+    id: [32m&apos;pay_134_5&apos;[39m,
+    customerName: [32m&apos;Fiona Yellow&apos;[39m,
+    amount: [33m85.25[39m,
+    customerAddress: [32m&apos;505 Yellow Way, Sydney, Australia&apos;[39m,
+    currency: [32m&apos;AUD&apos;[39m,
+    status: [32m&apos;failed&apos;[39m,
+    date: [32m&apos;2024-04-18T11:00:00Z&apos;[39m,
+    description: [32m&apos;Refunded service&apos;[39m
+  }
+]
+
+            </system-out>
+            <system-err>
+In HTML, &lt;td&gt; cannot be a child of &lt;td&gt;.
+This will cause a hydration error.
+
+  ...
+    &lt;QueryClientProvider client={{}}&gt;
+      &lt;div className=&quot;min-h-scre...&quot;&gt;
+        &lt;header&gt;
+        &lt;main className=&quot;max-w-7xl ...&quot;&gt;
+          &lt;PaymentsPage&gt;
+            &lt;styled.div&gt;
+              &lt;div className=&quot;sc-bRKDuR ...&quot;&gt;
+                &lt;PaymentsTable&gt;
+                  &lt;styled.table&gt;
+                    &lt;table className=&quot;sc-dYwGCk ...&quot;&gt;
+                      &lt;styled.thead&gt;
+                      &lt;styled.tbody&gt;
+                        &lt;tbody className=&quot;sc-jaXbil ...&quot;&gt;
+                          &lt;styled.tr&gt;
+                            &lt;tr className=&quot;sc-eqYatC ...&quot;&gt;
+                              &lt;styled.td&gt;
+&gt;                               &lt;td className=&quot;sc-kcLKEh ghzkgo&quot;&gt;
+                                  &lt;cell table={{...}} column={{id:&quot;id&quot;, ...}} row={{id:&quot;0&quot;,index:0, ...}} ...&gt;
+                                    &lt;styled.td&gt;
+&gt;                                     &lt;td className=&quot;sc-kcLKEh ghzkgo&quot;&gt;
+                              ...
+                          ...
+
+&lt;td&gt; cannot contain a nested &lt;td&gt;.
+See this log for the ancestor stack trace.
+
+            </system-err>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 2: Search by Payment ID &gt; should have a search input for payment ID" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 2: Search by Payment ID &gt; should search for payments by payment ID" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 3: Clear Filters &gt; should clear all filters when clear button is clicked" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 4: Handle Payment Not Found &gt; should display error message when payment ID is not found" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 5: Handle Server Error &gt; should display error message when API returns 500" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 6: Currency Filter &gt; should have a currency filter dropdown" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 6: Currency Filter &gt; should filter payments by currency when selected" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 7: Combined Currency and Payment ID Filter &gt; should filter by both currency and payment ID" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 8: Pagination &gt; should display pagination controls" time="0">
+            <skipped/>
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 8: Pagination &gt; should disable previous button on first page" time="0">
+            <skipped/>
+        </testcase>
+    </testsuite>
+</testsuites>
