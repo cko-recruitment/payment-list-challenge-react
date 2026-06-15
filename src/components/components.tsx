@@ -87,6 +87,11 @@ export const SearchButton = styled.button`
   &:hover {
     background-color: rgb(33, 65, 154);
   }
+
+    &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `;
 
 export const ClearButton = styled.button`
@@ -98,6 +103,11 @@ export const ClearButton = styled.button`
 
   &:hover {
     background-color: #4b5563;
+  }
+
+    &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;
 
@@ -161,6 +171,13 @@ export const StatusBadge = styled.span<{ status: string }>`
       : `background-color: #fee2e2; color: #b91c1c;`}
 `;
 
+export const SpinnerWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 16.625rem;
+`;
+
 export const Spinner = styled.div`
   width: 1.5rem;
   height: 1.5rem;
@@ -177,7 +194,7 @@ export const Spinner = styled.div`
   }
 `;
 
-export const ErrorBox = styled.div`
+export const ErrorBox = styled.div.attrs({ role: 'alert' })`
   padding: 1rem;
   margin-bottom: 1rem;
   color: #b91c1c;

@@ -27,6 +27,10 @@ allPayments.forEach(payment => {
 
 export const handlers = [
   http.get(`*${API_URL}`, async ({ request }) => {
+    // To simulate network delay for testing loading states, import `delay` from
+    // "msw" and uncomment the line below:
+    // await delay(5000);
+
     const url = new URL(request.url);
     const search = url.searchParams.get("search")?.toLowerCase() || "";
     const currency = url.searchParams.get("currency") || "";
