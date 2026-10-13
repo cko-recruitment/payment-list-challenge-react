@@ -9,7 +9,6 @@ import {
 } from "./mockPaymentsData";
 import { API_URL } from "../constants";
 
-// Create a map of all payments for easy lookup
 const allPayments: any[] = [
   ...mockPayments134,
   ...mockPayments456,
@@ -19,7 +18,6 @@ const allPayments: any[] = [
   ...mockPayments000,
 ];
 
-// Create a map for payment ID lookup
 const paymentIdMap: { [key: string]: any } = {};
 allPayments.forEach(payment => {
   paymentIdMap[payment.id] = payment;
@@ -56,15 +54,12 @@ export const handlers = [
 
     let filteredPayments: any[] = [];
 
-    // Filter payments based on search criteria and filters
     filteredPayments = allPayments.filter((pay) => {
-      // Search filter
       const matchesSearch = !search || 
         pay.id.toLowerCase().includes(search) ||
         pay.status?.toLowerCase().includes(search) ||
         pay.currency?.toLowerCase().includes(search);
       
-      // Currency filter
       const matchesCurrency = !currency || pay.currency === currency;
       
       return matchesSearch && matchesCurrency;

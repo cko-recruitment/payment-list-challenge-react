@@ -220,7 +220,7 @@ export const PaginationButton = styled.button`
 `;
 
 export const TableHeaderWrapper = styled.thead`
-  background-color: #f9fafb; /* Slightly darker background to differentiate the header */
+  background-color: #f9fafb;
 `;
 
 export const TableHeaderRow = styled.tr`

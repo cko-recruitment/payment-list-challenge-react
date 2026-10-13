@@ -13,14 +13,12 @@ import App from "./App";
 import { I18N } from "./constants/i18n";
 import { format } from 'date-fns';
 
-// Helper function to robustly check for error messages with better debugging
 export const waitForErrorMessage = async (expectedMessage: string, timeout = 10000) => {
   try {
     await waitFor(() => {
       expect(screen.getByText(expectedMessage)).toBeInTheDocument();
     }, { timeout });
   } catch (error) {
-    // If the expected message isn't found, let's see what error messages are actually on the page
     const errorElements = screen.queryAllByText(/error|not found|server/i);
     const errorTexts = errorElements.map(el => el.textContent).filter(Boolean);
     
@@ -52,13 +50,11 @@ export const getTableCellsByColumnName = (columnName: string, rowIndex: number) 
   }
 };
 
-
 export const formattedDate = (date: string) => {
   return format(new Date(date), "dd/MM/yyyy, HH:mm:ss")
 };
 
 export const getSearchInput = () => {
-  // Try to find by placeholder first, then by role with name
   try {
     return screen.getByPlaceholderText(I18N.SEARCH_PLACEHOLDER);
   } catch {
@@ -74,13 +70,11 @@ describe("App - Step 1: Basic Payment List", () => {
   test("should fetch and display payments in a table with page=1 and pageSize=5", async () => {
     render(<App />);
 
-    // Wait for the table to load with data cells
     await waitFor(() => {
       expect(screen.getByRole("table")).toBeInTheDocument();
       expect(screen.getAllByRole("cell").length).toBeGreaterThan(0);
     });
 
-    // Check that table headers are displayed using i18n strings
     expect(screen.getByText(I18N.TABLE_HEADER_PAYMENT_ID)).toBeInTheDocument();
     expect(screen.getByText(I18N.TABLE_HEADER_DATE)).toBeInTheDocument();
     expect(screen.getByText(I18N.TABLE_HEADER_AMOUNT)).toBeInTheDocument();
@@ -88,9 +82,8 @@ describe("App - Step 1: Basic Payment List", () => {
     expect(screen.getByText(I18N.TABLE_HEADER_CURRENCY)).toBeInTheDocument();
     expect(screen.getByText(I18N.TABLE_HEADER_STATUS)).toBeInTheDocument();
 
-    // Check that 5 payments are displayed (pageSize=5)
     const tableRows = screen.getAllByRole("row");
-    expect(tableRows).toHaveLength(6); // 1 header row + 5 data rows
+    expect(tableRows).toHaveLength(6);
   });
 });
 
@@ -125,7 +118,6 @@ describe("App - Step 3: Clear Filters", () => {
     const searchInput = getSearchInput();
     const searchButton = screen.getByRole("button", { name: I18N.SEARCH_BUTTON });
 
-    // Perform a search
     fireEvent.change(searchInput, { target: { value: "pay_134_1" } });
     fireEvent.click(searchButton);
 
@@ -133,11 +125,9 @@ describe("App - Step 3: Clear Filters", () => {
       expect(screen.getByText("pay_134_1")).toBeInTheDocument();
     });
 
-    // Clear filters
     const clearButton = screen.getByRole("button", { name: I18N.CLEAR_FILTERS });
     fireEvent.click(clearButton);
 
-    // Check that search input is cleared
     expect(searchInput).toHaveValue("");
   });
 });
@@ -200,15 +190,12 @@ describe("App - Step 7: Combined Currency and Payment ID Filter", () => {
     const searchButton = screen.getByRole("button", { name: I18N.SEARCH_BUTTON });
     const currencySelect = screen.getByRole("combobox", { name: I18N.CURRENCY_FILTER_LABEL });
 
-    // Search for a specific payment
     fireEvent.change(searchInput, { target: { value: "pay_134" } });
     fireEvent.click(searchButton);
 
-    // Filter by currency
     fireEvent.change(currencySelect, { target: { value: "USD" } });
 
     await waitFor(() => {
-      // Should show payments that match both criteria
       const usdPayments = screen.getAllByText("USD");
       expect(usdPayments.length).toBeGreaterThan(0);
     });
@@ -224,7 +211,6 @@ describe("App - Step 8: Pagination", () => {
       expect(screen.getAllByRole("cell").length).toBeGreaterThan(0);
     });
 
-    // Check for pagination buttons
     expect(screen.getByRole("button", { name: I18N.PREVIOUS_BUTTON })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: I18N.NEXT_BUTTON })).toBeInTheDocument();
   });

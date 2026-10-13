@@ -1,14 +1,10 @@
-import React from "react";
 import { I18N } from "./constants/i18n";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { PaymentsPage } from "./components/PaymentsPage";
 
-// This is required for tests to pass if ReactQuery is used
-// you don't have to use this library in your solution.
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // disable retries is required for tests to pass if ReactQuery is used
       retry: false,
     },
   },

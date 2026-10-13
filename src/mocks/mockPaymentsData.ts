@@ -1,4 +1,4 @@
-import { Payment } from "../types/payment";
+import { Payment } from "../types/Payment";
 
 export const mockPayments134: Payment[] = [
   {
